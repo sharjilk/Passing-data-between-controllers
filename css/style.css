@@ -1,0 +1,116 @@
+body {
+	font: 400 14px/1.6 'Open sans', Verdana, sans-serif;
+	color: #505050;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fff;
+    min-height: 100%;
+}
+
+h4{
+	font-weight:600;
+}
+
+input[type="button"]{
+	background: #205081;
+	border-color: transparent;
+	color: #fff;
+	border: 1px solid transparent;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	display: inline-block;
+	line-height: 1;
+	margin: 0 5px 0 0;
+	padding: 7px 10px;
+	cursor: pointer;
+}
+
+input[type="button"]:hover{
+	background: #3b73af;
+}
+
+input[disabled]{
+	background: #cccccc;
+	cursor: pointer;
+}
+input[disabled]:hover{
+	background: #cccccc;
+	cursor: pointer;
+}
+
+.air,
+.armed,
+.seal,
+.delta,
+.artillery,
+.hostiles{
+	position: relative;
+}
+
+.air{
+	border: 3px solid #b8c941;
+	padding: 10px;
+	width: 600px;
+	margin: 0 auto;
+	background: #f8f8f8;
+}
+.air .unit-name{
+	color: #91a122;
+}
+
+.armed{
+	border: 3px solid #30d43d;
+	padding: 10px;
+	margin-top: 10px;
+	background: #f0f0f0;
+}
+.armed  .unit-name{
+	color:#30d43d;
+}
+
+.seal{
+	border: 3px solid #7070db;
+	padding: 10px;
+	margin-top: 10px;
+	background: #e7e7e7;
+}
+.seal  .unit-name{
+	color:#7070db;
+}
+
+.delta{
+	border: 3px solid #70d0db;
+	padding: 10px;
+	background: #e7e7e7;
+}
+.delta  .unit-name{
+	color:#70d0db;
+}
+
+.artillery{
+	border: 3px solid #178718;
+	padding: 10px;
+	background: #f0f0f0;
+}
+.artillery  .unit-name{
+	color:#178718;
+}
+
+.hostiles{
+	border: 3px solid #ff6868;
+	padding: 10px;
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 10px;
+	background: #ffe6e6;
+}
+.hostiles .unit-name{
+	color:red;
+}
+
+.unit-name{
+	position: absolute;
+	top:0;
+	right:6px;
+	margin:0;
+}

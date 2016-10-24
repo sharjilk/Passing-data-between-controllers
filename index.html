@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="NgApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<link href="css/style.css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600italic,700italic,600,800,300,700,800italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	
+	<div class="air" ng-controller="AirborneCtrl">
+		<p class="unit-name">Air Unit</p>
+		<input type="button" value="Broadcast" ng-click="AskForSupport($event)" />
+		<input type="button" ng-disabled="deployBtn" value="Deploy Air Support" ng-click="DeploySupport($event)" />
+		<h4>{{Message}}</h4>
+		<div class="artillery" ng-controller="ArtilleryCtrl">
+			<p class="unit-name">Artillery Unit</p>
+			<h4>{{Message}}</h4>
+		</div>
+		<div class="armed" ng-controller="ArmoredCtrl">
+			<p class="unit-name">Armored Forces</p>
+			<h4>{{Message}}</h4>
+			<div class="delta" ng-controller="DeltateamCtrl">
+				<p class="unit-name">Delta team</p>
+				<h4>{{Message}}</h4>
+			</div>
+			<div class="seal" ng-controller="SealteamCtrl">
+				<p class="unit-name">Seal Team</p>
+				<input ng-disabled="emitBtn" type="button" value="Emit" ng-click="ReplyForSupport($event)" />
+				<h4>{{Message}}</h4>
+			</div>
+		</div>
+	</div>
+	<div class="hostiles" ng-controller="HostileCtrl">
+		<p class="unit-name">Hostiles</p>
+		<h4>{{Message}}</h4>
+	</div>
+	
+	<script src="js/app.js"></script>
+</body>
+</html>
